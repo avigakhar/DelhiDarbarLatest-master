@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:background="@drawable/dialog_bg"
+    android:orientation="vertical"
+    app:cardCornerRadius="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="20dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="160dp">
+
+            <com.app.delhidarbar.utils.rounded_iv.RoundedImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_gravity="center"
+                android:adjustViewBounds="true"
+                android:background="@drawable/round"
+                android:cropToPadding="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/image"
+                app:riv_corner_radius_top_left="10dp"
+                app:riv_corner_radius_top_right="10dp"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/customise_txt_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".7"
+                android:fontFamily="@font/pop_regular"
+                android:text="Masala"
+                android:textColor="@color/black"
+                android:textSize="@dimen/ButtonTextSize"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/customise_txt_price"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".3"
+                android:fontFamily="@font/pop_regular"
+                android:gravity="center|end"
+                android:text="89.0"
+                android:textColor="@color/black"
+                android:textSize="@dimen/ButtonTextSize"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/customise_txt_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/pop_regular"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="Masala"
+            android:textColor="@color/black"
+            android:textSize="@dimen/NormalTextSize" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

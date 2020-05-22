@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_parentHome"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="5dp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/rl_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/ButtonSize"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/gray_background"
+                    android:backgroundTint="@color/light_grey_color">
+
+                    <EditText
+                        android:id="@+id/edt_search"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toLeftOf="@id/iv_search"
+                        android:background="@null"
+                        android:fontFamily="@font/pop_regular"
+                        android:hint="@string/search"
+                        android:imeOptions="actionDone"
+                        android:paddingLeft="15dp"
+                        android:singleLine="true"
+                        android:textColor="@color/hint_color"
+                        android:textColorHint="@color/hint_color" />
+
+                    <ImageView
+                        android:id="@+id/iv_search"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:padding="10dp"
+                        android:src="@drawable/ic_search_black_24dp"
+                        android:tint="@color/hint_color" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/lay_cart"
+                    android:layout_width="50dp"
+                    android:layout_height="@dimen/ButtonSize"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="center"
+                    android:layout_toRightOf="@+id/rl_search"
+                    android:background="@drawable/button_less_round_shape_light_grey"
+                    android:backgroundTint="@color/light_grey_color"
+                    android:gravity="center"
+                    android:visibility="gone">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_shopping_cart_black_24dp"
+                            android:tint="@color/hint_color" />
+
+                        <TextView
+                            android:id="@+id/txt_cartcount"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="end|top"
+                            android:layout_marginRight="5dp"
+                            android:background="@drawable/circle_without_border"
+                            android:backgroundTint="@color/selected"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="10sp" />
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginRight="@dimen/_20sdp"
+                    android:layout_marginBottom="20dp"
+                    app:cardBackgroundColor="@android:color/transparent"
+                    app:cardCornerRadius="@dimen/_20sdp">
+
+                    <ImageView
+                        android:id="@+id/iv_floatSpoons"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="#1b83fc"
+                        android:src="@drawable/menufloating" />
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_dashboardRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="6dp"
+                    android:background="@drawable/home_dashboard_drawable"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rr_viewMyCart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:visibility="gone">
+
+            <include layout="@layout/dasboard_view_cart" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/pb_progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+</RelativeLayout>

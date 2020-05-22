@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/rl_search1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="5dp">
+
+        <RelativeLayout
+            android:id="@+id/rl_search"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ButtonSize"
+            android:layout_weight="1"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/gray_background"
+            android:backgroundTint="@color/light_grey_color">
+
+            <EditText
+                android:id="@+id/edt_search"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@id/iv_search"
+                android:background="@null"
+                android:fontFamily="@font/pop_regular"
+                android:hint="Search"
+                android:imeOptions="actionDone"
+                android:paddingLeft="15dp"
+                android:singleLine="true"
+                android:textColor="@color/hint_color"
+                android:textColorHint="@color/hint_color" />
+
+            <ImageView
+                android:id="@+id/iv_search"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:padding="10dp"
+                android:src="@drawable/ic_search_black_24dp"
+                android:tint="@color/hint_color" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/lay_cart"
+            android:layout_width="50dp"
+            android:layout_height="@dimen/ButtonSize"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@+id/rl_search"
+            android:gravity="center"
+            android:visibility="gone"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/light_grey_color"
+            android:background="@drawable/button_less_round_shape_light_grey">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tint="@color/hint_color"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_shopping_cart_black_24dp"/>
+
+                <TextView
+                    android:id="@+id/txt_cartcount"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:text="0"
+                    android:textSize="10sp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/circle_without_border"
+                    android:gravity="center"
+                    android:backgroundTint="@color/selected"
+                    android:layout_gravity="end|top"
+                    android:textColor="@color/colorWhite"/>
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_below="@+id/rl_search1"
+       android:layout_above="@id/rl_search_view_cart"
+       android:layout_height="match_parent">
+       <androidx.recyclerview.widget.RecyclerView
+           android:id="@+id/rv_search"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+
+           android:layout_marginTop="@dimen/_10sdp"
+           app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+   </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/pb_progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/rl_search_view_cart"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <include layout="@layout/dasboard_view_cart"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

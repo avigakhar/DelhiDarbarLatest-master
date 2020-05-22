@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "287826897053",
+    "firebase_url": "https://delhi-darbar-restaurants.firebaseio.com",
+    "project_id": "delhi-darbar-restaurants",
+    "storage_bucket": "delhi-darbar-restaurants.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:287826897053:android:5035e578a0386c48714c74",
+        "android_client_info": {
+          "package_name": "com.app.delhidarbar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "287826897053-v57ogp32e0qktk8dtr9ck78gimq73d9d.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.delhidarbar",
+            "certificate_hash": "cae84e3ad0afbdf5b1959207e25e6e8580d1b39e"
+          }
+        },
+        {
+          "client_id": "287826897053-gbtkuti9cl1pjbbujeuog2n5l4pqth6a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDncjaEWIjp1gnFXMeEqB7xAHtYfsrX9u4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "287826897053-gbtkuti9cl1pjbbujeuog2n5l4pqth6a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

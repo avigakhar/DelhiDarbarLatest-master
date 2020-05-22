@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_itemsHeading"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ButtonSize"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:gravity="center">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:fontFamily="@font/elephant"
+            android:gravity="center_vertical"
+            android:text="@string/all"
+            android:singleLine="true"
+            android:id="@+id/tv_headingStarter"
+            android:textColor="@android:color/black"
+            android:textSize="22sp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:layout_marginTop="2dp"
+            android:gravity="center|right"
+            android:weightSum=".5"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".25"
+                android:gravity="center|right"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_eggs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/vegan"
+                    android:textSize="@dimen/SmallTextSize"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/pop_bold"
+                    android:textColor="@color/dark_orange" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/sb_vegan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:background="@null"
+                    android:layout_marginLeft="6dp"
+                    android:layout_toRightOf="@+id/tv_eggs"
+                    android:layout_centerInParent="true"
+                    android:button="@drawable/checkbox_yura"
+                    android:thumb="@null"
+                    app:track="@null"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center|right"
+                android:orientation="horizontal"
+                android:layout_weight=".25">
+
+                <TextView
+                    android:id="@+id/tv_veg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_centerInParent="true"
+                    android:text="@string/veg"
+                    android:textSize="@dimen/SmallTextSize"
+                    android:fontFamily="@font/pop_bold"
+                    android:textColor="@color/dark_orange"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/sb_veg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:background="@null"
+                    android:layout_marginLeft="6dp"
+                    android:layout_toRightOf="@id/tv_veg"
+                    android:layout_gravity="center"
+                    android:layout_centerInParent="true"
+                    android:button="@drawable/checkbox_yura"
+                    android:thumb="@null"
+                    app:track="@null"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_childDashboard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="5dp"/>
+
+        <TextView
+            android:id="@+id/tv_not_found"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:gravity="center"
+            android:visibility="gone"
+            android:textSize="@dimen/SmallTextSize"
+            android:textColor="@color/black"
+            android:fontFamily="@font/pop_regular"
+            android:text="@string/no_item_found."/>
+
+    </RelativeLayout>
+
+</LinearLayout>

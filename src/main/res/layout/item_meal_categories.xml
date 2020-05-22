@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_15sdp"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:minWidth="@dimen/_80sdp"
+    android:paddingLeft="@dimen/_3sdp">
+
+    <TextView
+        android:id="@+id/tv_categories"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:minWidth="@dimen/_80sdp"
+        android:background="@drawable/button_round_shape_light_grey"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="3dp"
+        android:fontFamily="@font/pop_regular"
+        android:gravity="center"
+        android:maxLines="1"
+        android:text="Specials"
+        android:textSize="13sp"
+        android:textAllCaps="true"
+        android:textColor="@android:color/black"
+        android:textStyle="bold" />
+
+</LinearLayout>

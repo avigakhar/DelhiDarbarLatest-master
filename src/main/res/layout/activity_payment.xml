@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_15sdp"
+        android:fontFamily="@font/elephant"
+        android:gravity="center|start"
+        android:text="Pay 3.95€"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/_25ssp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/_15sdp"
+        android:background="@drawable/button_round_shape_light_grey"
+        android:backgroundTint="@color/un_select_dashboard"
+        android:gravity="center"
+        android:text="@string/pay_now"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/_15ssp"
+        android:textStyle="bold" />
+</RelativeLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="30dp"
+    android:layout_margin="20dp"
+    android:background="@drawable/dialog_bg">
+
+    <TextView
+        android:id="@+id/txt_min_qty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/pop_regular"
+        android:gravity="center"
+        android:text="@string/covoid"
+        android:textColor="@color/textcolor"
+        android:textSize="@dimen/fab_margin" />
+
+</RelativeLayout>

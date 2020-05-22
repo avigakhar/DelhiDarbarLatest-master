@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_35sdp"
+    android:background="@color/un_select_dashboard"
+    android:weightSum="1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.4">
+
+        <TextView
+            android:id="@+id/tv_myActualPrice"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/pop_regular"
+            android:gravity="center"
+            android:text="Sum"
+            android:textColor="@android:color/white" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.6">
+
+        <Button
+            android:id="@+id/btn_viewCart"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/select_dashboard"
+            android:drawableRight="@drawable/ic_shopping_cart_black_24dp"
+            android:fontFamily="@font/pop_regular"
+            android:paddingRight="@dimen/_20sdp"
+            android:text="@string/view_cart"
+            android:textColor="@android:color/white" />
+
+    </LinearLayout>
+
+</LinearLayout>

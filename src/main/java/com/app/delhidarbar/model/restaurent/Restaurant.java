@@ -1,0 +1,53 @@
+package com.app.delhidarbar.model.restaurent;
+
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
+public class Restaurant {
+
+@SerializedName("id")
+@Expose
+private Integer id;
+@SerializedName("name")
+@Expose
+private String name;
+@SerializedName("address")
+@Expose
+private String address;
+@SerializedName("image")
+@Expose
+private String image;
+
+public Integer getId() {
+return id;
+}
+
+public void setId(Integer id) {
+this.id = id;
+}
+
+public String getName() {
+return name;
+}
+
+public void setName(String name) {
+this.name = name;
+}
+
+public String getAddress() {
+return address;
+}
+
+public void setAddress(String address) {
+this.address = address;
+}
+
+public String getImage() {
+return image;
+}
+
+public void setImage(String image) {
+this.image = image;
+}
+
+}

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="130dp"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+    app:cardCornerRadius="10dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_card"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/_8sdp"
+        app:cardBackgroundColor="#dc7c2d"
+        app:cardCornerRadius="@dimen/_6sdp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_first_order"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="first order"
+                android:textSize="13sp"
+                android:singleLine="true"
+                android:fontFamily="@font/pop_regular"
+                android:textAllCaps="true"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/tv_offer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/_40_off"
+                android:textSize="11sp"
+                android:fontFamily="@font/pop_regular"
+                android:textAllCaps="true"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/tv_offer_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pop_regular"
+                android:text="Code: DELHID"
+                android:textSize="11sp"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/tv_disccount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Discount Upto 5€"
+                android:textSize="9sp"
+                android:fontFamily="@font/pop_regular"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <com.app.delhidarbar.utils.rounded_iv.RoundedImageView
+        android:id="@+id/photo_imageView"
+        android:layout_width="130dp"
+        android:layout_height="140dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/demo"
+        app:riv_border_color="#fafafa"
+        app:riv_border_width="1dip"
+        app:riv_corner_radius="@dimen/_4sdp"
+        app:riv_mutate_background="true"
+        app:riv_oval="false" />
+
+</FrameLayout>

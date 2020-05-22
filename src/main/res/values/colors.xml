@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ff8727</color>
+    <color name="colorPrimaryDark">@android:color/transparent</color>
+    <color name="colorAccent">#FF9902</color>
+    <color name="dark_orange">#dc7c2d</color>
+    <color name="bengan_color">#745e99</color>
+    <color name="gulabi_color">#ff5fa3</color>
+    <color name="button_color">#FFFFFF</color>
+    <color name="add_to_cart_">#ce7328</color>
+    <color name="light_add_to_cart_">#50ff9900</color>
+    <color name="edit_text_color">#130101</color>
+    <color name="hint_color">#808080</color>
+    <color name="light_grey_color">#ededed</color>
+    <color name="message_box_background">#f8f6f5</color>
+    <color name="place_order">#3d2f25</color>
+    <color name="text_color_black">#110101</color>
+    <color name="un_select_dashboard">#ff8727</color>
+    <color name="select_dashboard">#d86c15</color>
+    <color name="test_selected">#252525</color>
+    <color name="test_unselected">#97252525</color>
+    <color name="blue_color">#1b83fc</color>
+    <color name="colorBlack">#FF000000</color>
+    <color name="colorWhite">#FFFFFFFF</color>
+    <color name="colorYellow">#EFC64A</color>
+    <color name="colorAmber">#EF9C4E</color>
+    <color name="colorOrange">#FB8621</color>
+    <color name="colorDeepOrange">#EC5016</color>
+    <color name="colorTranslucentBlack">#0A000000</color>
+    <color name="rencent_location">#2C2A2A</color>
+
+    <color name="black">#000000</color>
+    <color name="textcolor">#110101</color>
+    <color name="graycolor">#95000000</color>
+    <color name="menu_color">#FF8727</color>
+    <color name="selected">#D86C15</color>
+    <color name="red">#FF0000</color>
+    <color name="bg">#FFEFE1</color>
+</resources>

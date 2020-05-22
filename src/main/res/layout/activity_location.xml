@@ -1,0 +1,279 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/r1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="@string/select_address"
+            android:textSize="15sp"
+            android:textColor="@color/textcolor"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btn_add_new"
+            android:layout_width="120dp"
+            android:text="@string/add_new"
+            android:background="@drawable/bg_button"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/colorWhite"
+            android:layout_height="30sp" />
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/r1"
+        android:layout_marginBottom="10dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:layout_margin="20dp"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_location1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="10dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/elephant"
+                android:gravity="center"
+                android:text="@string/enter_your_loction"
+                android:textColor="@color/edit_text_color"
+                android:textSize="@dimen/ButtonTextSize" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tab_street"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="bottom"
+                app:hintEnabled="false"
+                app:hintTextAppearance="@style/TextLabel">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_street"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/ButtonSize"
+                    android:background="@drawable/button_less_round_shape_light_grey"
+                    android:drawablePadding="8dp"
+                    android:fontFamily="@font/pop_regular"
+                    android:gravity="center_vertical"
+                    android:imeOptions="actionNext"
+                    android:maxLines="1"
+                    android:hint="@string/street"
+                    android:textColorHint="@color/hint_color"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:singleLine="true"
+                    android:inputType="text"
+                    android:textColor="@color/edit_text_color"
+                    android:textSize="@dimen/NormalTextSize" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="bottom"
+                app:hintEnabled="false"
+                app:hintTextAppearance="@style/TextLabel">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_building"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/ButtonSize"
+                    android:background="@drawable/button_less_round_shape_light_grey"
+                    android:drawablePadding="8dp"
+                    android:fontFamily="@font/pop_regular"
+                    android:gravity="center_vertical"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:hint="@string/building"
+                    android:textColorHint="@color/hint_color"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:singleLine="true"
+                    android:textColor="@color/edit_text_color"
+                    android:textSize="@dimen/NormalTextSize" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="bottom"
+                app:hintEnabled="false"
+                app:hintTextAppearance="@style/TextLabel">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_city"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/ButtonSize"
+                    android:background="@drawable/button_less_round_shape_light_grey"
+                    android:drawablePadding="8dp"
+                    android:fontFamily="@font/pop_regular"
+                    android:gravity="center_vertical"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:hint="@string/city"
+                    android:textColorHint="@color/hint_color"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:singleLine="true"
+                    android:textColor="@color/edit_text_color"
+                    android:textSize="@dimen/NormalTextSize" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="bottom"
+                app:hintEnabled="false"
+                app:hintTextAppearance="@style/TextLabel">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_postalCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/ButtonSize"
+                    android:background="@drawable/button_less_round_shape_light_grey"
+                    android:drawablePadding="8dp"
+                    android:fontFamily="@font/pop_regular"
+                    android:gravity="center_vertical"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:hint="@string/postalcode"
+                    android:textColorHint="@color/hint_color"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:singleLine="true"
+                    android:textColor="@color/edit_text_color"
+                    android:textSize="@dimen/NormalTextSize" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="bottom"
+                app:hintEnabled="false"
+                app:hintTextAppearance="@style/TextLabel">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_contact"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/ButtonSize"
+                    android:background="@drawable/button_less_round_shape_light_grey"
+                    android:drawablePadding="8dp"
+                    android:fontFamily="@font/pop_regular"
+                    android:gravity="center_vertical"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:hint="@string/contact_no"
+                    android:textColorHint="@color/hint_color"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:singleLine="true"
+                    android:textColor="@color/edit_text_color"
+                    android:textSize="@dimen/NormalTextSize" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="bottom"
+                app:hintEnabled="false"
+                app:hintTextAppearance="@style/TextLabel">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_note"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="@dimen/ButtonSize"
+                    android:background="@drawable/button_less_round_shape_light_grey"
+                    android:drawablePadding="8dp"
+                    android:fontFamily="@font/pop_regular"
+                    android:gravity="center_horizontal"
+                    android:imeOptions="actionDone"
+                    android:inputType="textMultiLine"
+                    android:minLines="3"
+                    android:hint="@string/note"
+                    android:textColorHint="@color/hint_color"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:singleLine="true"
+                    android:textColor="@color/edit_text_color"
+                    android:textSize="@dimen/NormalTextSize" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ButtonSize"
+        android:layout_marginTop="40dp"
+        android:layout_alignParentBottom="true"
+        android:background="#ed7a1c"
+        android:fontFamily="@font/pop_bold"
+        android:text="@string/Next"
+        android:textColor="@color/button_color" />
+
+    <ProgressBar
+        android:id="@+id/pb_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</RelativeLayout>
